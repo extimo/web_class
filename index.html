@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta http-equiv=Content-Type content="text/html;charset=utf-8">
     <title>西南交通大学2014级信息五班 | 主页</title>
     <link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/csshake.min.css" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./js/jquery.min.js"></script>
     <!-- Custom Theme files -->
@@ -57,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div id="home" class="header">
         <div class="top-header">
             <div class="container">
-                <div class="logo">
+                <div class="logo shake shake-constant hover-stop">
                     <a href="#"><img src="./images/logo.png" title="Johndeo" /></a>
                 </div>
                 <!----start-top-nav---->
@@ -331,30 +332,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!--//works-grids--->
     </div>
-    </div>
     <!----//works ---->
     <!----copy-right---->
     <div class="copy-right text-center">
         <div class="container">
-            <p>Template by <a href="#">W3layouts</a></p>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    /*
-                    var defaults = {
-                        containerID: 'toTop', // fading element id
-                        containerHoverID: 'toTopHover', // fading element hover id
-                        scrollSpeed: 1200,
-                        easingType: 'linear'
-                    };
-                    */
-
-                    $().UItoTop({ easingType: 'easeOutQuart' });
-
-                });
-            </script>
+            <p>©2014 <a href="#" class="shake">Data Blade</a> Studio.</p>
             <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
         </div>
     </div>
     <!---//copy-right---->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
 </body>
 </html>
