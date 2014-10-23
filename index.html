@@ -1,71 +1,308 @@
-<!doctype html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Web class by nemoii</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Web class</h1>
-        <p></p>
-
-        <p class="view"><a href="https://github.com/nemoii/web_class">View the Project on GitHub <small>nemoii/web_class</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/nemoii/web_class/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/nemoii/web_class/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/nemoii/web_class">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we鈥檒l help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/nemoii">nemoii</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+	<head>
+		<title>myfolio Website Template | Home :: w3layouts</title>
+		<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="./js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="./css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+   		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="./js/move-top.js"></script>
+		<script type="text/javascript" src="./js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts--->
+		<!---//webfonts--->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+	</head>
+	<body>
+		<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="#"><img src="./images/logo.png" title="Johndeo" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li><a href="#home" class="scroll">主页</a><span> </span></li>
+								<li><a href="#about" class="scroll">关于我们</a></li>
+								<li><a href="#services" class="scroll">Services</a></li>
+								<li><a href="#work" class="scroll">MY work</a><span> </span></li>
+								<li><a href="#contact" class="scroll">联系方式</a></li>
+								<div class="clearfix"> </div>
+							</ul>
+							<a href="#" id="pull"><img src="./images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----banner---->
+			<div class="banner">
+				<!---- banner-info ---->
+				<div class="banner-info text-center">
+					<p>Lorem ipsum dolor sit iusmod tempor </p>
+					<h1>incididunt bore</h1>
+					<span>Orem ipsum dolor sit amet, consectetur</span>
+					<label> </label>
+					<div class="clearfix"> </div>
+					<a class="bannner-btn" href="#">KNOW MORE</a>
+				</div>
+				<!-- //banner-info ---->
+			</div>
+			<!--//banner---->
+			<!---- about --->
+			<div id="about" class="about">
+				<div class="about-head text-center">
+					<div class="container">
+						<h2>ABOUT ME</h2>
+						<span> </span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <label>quis nostrud exercitation ullamco</label> laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+					</div>
+				</div>
+				<!--- about-grids --->
+				<div class="about-grids text-center">
+					<div class="container">
+						<div class="col-md-3 about-grid">
+							<span class="light-icon"> </span>
+							<h3><a href="#">Title goes here</a></h3>
+							<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							<label> </label>
+						</div>
+						<div class="col-md-3 about-grid">
+							<span class="pen-icon"> </span>
+							<h3><a href="#">Title goes here</a></h3>
+							<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							<label> </label>
+						</div>
+						<div class="col-md-3 about-grid">
+							<span class="cog-icon"> </span>
+							<h3><a href="#">Title goes here</a></h3>
+							<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							<label> </label>
+						</div>
+						<div class="col-md-3 about-grid">
+							<span class="mon-icon"> </span>
+							<h3><a href="#">Title goes here</a></h3>
+							<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!--- about-grids --->
+			</div>
+			<!----//about --->
+			<!--- services ---->
+			<div id="services" class="services">
+					<!---services-grids--->
+					<div class="services-grids">
+						<div class="col-md-6 services-grid-left">
+							<div class="service-head">
+								<h2>SERVICES</h2>
+								<span> </span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+							<!----- services-grid-left-grids ---->
+							<div class="services-grid-left-grids">
+								<div class="col-md-6 services-grid-left-grid">
+									<span> </span>
+									<h3><a href="#">Title goes here</a></h3>
+									<p>Onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+								</div>
+								<div class="col-md-6 services-grid-left-grid">
+									<span class="search"> </span>
+									<h3><a href="#">Title goes here</a></h3>
+									<p>Onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+								</div>
+								<div class="col-md-6 services-grid-left-grid">
+									<span class="clock"> </span>
+									<h3><a href="#">Title goes here</a></h3>
+									<p>Onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+								</div>
+								<div class="col-md-6 services-grid-left-grid">
+									<span class="chart"> </span>
+									<h3><a href="#">Title goes here</a></h3>
+									<p>Onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+								</div>
+							</div>
+							<!----- services-grid-left-grids ---->
+						</div>
+						<div class="col-md-6 services-grid-right">
+							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!---services-grids--->
+			</div>
+			<!---//services ---->
+			<!---- works ---->
+			<div id="work" class="works">
+				<div class="conatiner">
+					<div class="works-head text-center">
+						<h2>MY WORK</h2>
+						<span> </span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+					<!---works-grids--->
+					<div class="works-grids">
+						<div class="works-grid col-md-3">
+							<img src="./images/w1.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w2.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w3.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w4.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w5.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w6.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w7.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="works-grid col-md-3">
+							<img src="./images/w8.jpg" title="name" />
+							<div class="caption">
+								<h4>Title goes here</h4>
+								<p>onsectetur adipisicing elit, sedo eiusmod tempor incidiet dolorerserss eerhfre mag.</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--//works-grids--->
+				</div>
+			</div>
+			<!----//works ---->
+			<!---- contact ----->
+			<div id="contact" class="contact">
+				<div class="conatiner">
+					<div class="contact-head text-center">
+							<h2>CONTACT ME</h2>
+							<span> </span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<!----Contact-form---->
+				<div class="Contact-form">
+					<div class="send-form text-center">
+						<form>
+							<span class="text-box1">
+								<label>NAME</label>
+								<input type="text" value="Enter your name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your name';}">
+							</span>
+							<span class="text-box2">
+								<label>EMAIL ADDRESS</label>
+								<input type="text" value="Enter your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your Email';}">
+							</span>
+							<span class="text-box3">
+								<label>MESSAGE</label>
+								<textarea>Type yor message</textarea>
+							</span>
+							<div class="clearfix"> 
+							<input type="submit" value="Submit" />
+						</form>
+					</div>
+				</div>
+				<!----Contact-form---->
+			</div>
+			<!----//contact ----->
+			<!----copy-right---->
+			<div class="copy-right text-center">
+				<div class="container">
+					<p>Template by <a href="#">W3layouts</a></p>
+					<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+					</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+			</div>
+			<!---//copy-right---->
+	</body>
 </html>
+
