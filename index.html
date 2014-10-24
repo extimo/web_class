@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
                 event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top - 64 }, 1000);
             });
         });
     </script>
@@ -58,12 +58,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="top-header">
             <div class="container">
                 <div class="logo shake shake-constant hover-stop">
-                    <a href="#"><img src="./images/logo.png" title="Johndeo" /></a>
+                    <a href="/"><img src="./images/logo.png" title="信息五班的首页" /></a>
                 </div>
                 <!----start-top-nav---->
                 <nav class="top-nav">
                     <ul class="top-nav">
-                        <li><a href="#home" class="scroll">主页</a><span> </span></li>
                         <li><a href="#about" class="scroll">关于我们</a></li>
                         <li><a href="#banfeng" class="scroll">班风建设</a></li>
                         <li><a href="#guanli" class="scroll">班级管理</a></li>
